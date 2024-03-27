@@ -88,7 +88,7 @@ function App() {
           <TextField id="outlined-basic" label="Username" name='username' value={username ||""} variant="outlined" className='w-100' onChange={(e)=>validate(e)} /> 
           {!isUsername && <p className='text-danger'>Invalid Input</p>}
           <br /><br />
-          <TextField id="outlined-basic" label="Password" name='password' value={password ||""} variant="outlined" className='w-100' onChange={(e)=>validate(e)} /> 
+          <TextField id="outlined-basic" label="Password" name='password' type='password' value={password ||""} variant="outlined" className='w-100' onChange={(e)=>validate(e)} /> 
           {!isValidpsw && <p className='text-danger'>Invalid Input</p>}
           <br /><br />
           <TextField id="outlined-basic" label="Email" name='emailid' value={emailid ||""} variant="outlined" className='w-100' onChange={(e)=>validate(e)}/>
