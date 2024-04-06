@@ -56,7 +56,7 @@ function App() {
     }
   
     if(isUsername && isValidpsw && isValidemail ){
-      setLoginStatus("Login Successful")
+      setLoginStatus("Registration Successful")
     }
     else{
       setLoginStatus(<span style={{ color: 'red' }}>Invalid Credentials</span>)
@@ -86,17 +86,17 @@ function App() {
 
           <form action="" className='mt-4'>
           <TextField id="outlined-basic" label="Username" name='username' value={username ||""} variant="outlined" className='w-100' onChange={(e)=>validate(e)} /> 
-          {!isUsername && <p className='text-danger'>Invalid Input</p>}
+          {!isUsername && <p className='text-danger'>Must include atleast 5 characters</p>}
           <br /><br />
           <TextField id="outlined-basic" label="Password" name='password' type='password' value={password ||""} variant="outlined" className='w-100' onChange={(e)=>validate(e)} /> 
-          {!isValidpsw && <p className='text-danger'>Invalid Input</p>}
+          {!isValidpsw && <p className='text-danger'>Must include atleast 5 characters with atleast 1 uppercase,a number and a special symbol</p>}
           <br /><br />
           <TextField id="outlined-basic" label="Email" name='emailid' value={emailid ||""} variant="outlined" className='w-100' onChange={(e)=>validate(e)}/>
-           {!isValidemail && <p className='text-danger'>Invalid Input</p>}
+           {!isValidemail && <p className='text-danger'>Enter a valid email</p>}
           </form>
 
           <div className='d-flex-mt-3'>
-          <Button onClick={handleSubmit} variant="contained"  color="success" className='w-25 ms-5 mt-3 justify-content-center align-items-center' disabled={isUsername && isValidpsw && isValidemail?false:true}> LOGIN
+          <Button onClick={handleSubmit} variant="contained"  color="success" className='w-25 ms-5 mt-3 justify-content-center align-items-center' disabled={isUsername && isValidpsw && isValidemail?false:true}> REGISTER
            </Button>
            <Button onClick={handleReset} variant="outlined" color="error" className='w-25 ms-5 mt-3 justify-content-center align-items-center'>RESET 
            </Button>
